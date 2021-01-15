@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-login">
+        <div class="container-text">
+            <h1 class="loginh1">Welcome to Vision CronJobs </h1>
+            <p class="loginp">Welcome to our online CronJob organiser!</p>
+            <p class="loginp">
+                Infinite possibilities are waiting for you. We provide you the platform for your creative ideas. Just
+                tell us when and what and we will take care of it. It’s a really reliable solution for all your ideas.
+                Go and expand your limits, do what you cant.
+            </p>
+        </div>
+        <div class="container-login-form">
+            <div class="border">
+                <h3 class="login-text">E-Mail</h3>
+                <label>
+                    <input type="text" class="input-login" placeholder="E-Mail"/>
+                </label>
+                <h3 class="login-text">Password</h3>
+                <label>
+                    <input type="password" class="input-login" placeholder="Password"/>
+                </label>
+                <br>
+                <br>
+                <a href="{% url 'sign_up' %}"><button>SignUp</button></a>
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
