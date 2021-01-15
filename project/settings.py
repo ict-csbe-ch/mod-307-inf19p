@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cronjob',
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'M307',
         'USER': 'postgres',
-        'PASSWORD': 'Diva2013',
+        'PASSWORD': 'Jamara',
         'HOST': 'localhost',
         'PORT': 5432,
     }
