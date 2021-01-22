@@ -22,8 +22,14 @@
                 </label>
                 <br>
                 <br>
-                <a href="{% url 'sign_up' %}"><button>SignUp</button></a>
-                <button>Login</button>
+                <a href="{% url 'sign_up' %}">
+                    <button>SignUp</button>
+                </a>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Log In</button>
+                </form>
             </div>
         </div>
     </div>
