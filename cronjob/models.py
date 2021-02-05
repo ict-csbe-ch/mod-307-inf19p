@@ -13,15 +13,23 @@ class Cronjob(models.Model):
     user = models.ForeignKey("User", on_delete=models.RESTRICT)
 
 
+    def __str__(self):
+        return f'{self.title} {self.address} {self.user}'
+
 class Address(models.Model):
     street = models.CharField(max_length=255,  null=False)
     strassenNr = models.CharField(max_length=10,  null=False)
     plz = models.ForeignKey("Ort", on_delete=models.RESTRICT)
 
+    def __str__(self):
+        return f'{self.street} {self.strassenNr} {self.plz}'
 
 class Ort(models.Model):
     plz = models.CharField(max_length=25, null=False)
     name = models.CharField(max_length=255, null=False)
+
+    def __str__(self):
+        return f'{self.plz} {self.name}'
 
 
 class User(models.Model):
@@ -30,3 +38,6 @@ class User(models.Model):
     lastName = models.CharField(max_length=25, null=False)
     password = models.CharField(max_length=25, null=False)
     address = models.ForeignKey("Address", on_delete=models.RESTRICT)
+
+    def __str__(self):
+        return f'{self.firstName} {self.lastName} {self.address} {self.email}'
