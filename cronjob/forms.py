@@ -1,10 +1,19 @@
 from django.forms import ModelForm
-from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from django.contrib.auth.models import User
+from cronjob.models import User, Address, Ort
 
 
-class CreateUserForm(UserCreationForm):
+class CreateUserForm(ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'email','first_name','last_name', 'password1', 'password2']
+        fields = ['email','firstName','lastName', 'password']
+
+class CreateAddressForm(ModelForm):
+    class Meta:
+        model = Address
+        fields = ['street','strassenNr','plz']
+
+class CreateOrtForm(ModelForm):
+    class Meta:
+        model = Ort
+        fields = ['plz','name']
