@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class CronjobConfig(AppConfig):
+class MyAppConfig(AppConfig):
     name = 'cronjob'
