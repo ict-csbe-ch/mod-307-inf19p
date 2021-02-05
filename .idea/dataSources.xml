@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="M307@localhost" uuid="62bc1349-27a5-406f-a6b5-af4934735e78">
+    <data-source source="LOCAL" name="mod-307-inf19p" uuid="b7228a7a-373f-434c-955b-b96ff8bbc9da">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>Heroku Hosting</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/M307</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-34-254-69-72.eu-west-1.compute.amazonaws.com:5432/d2rf79b3rphbk8</jdbc-url>
     </data-source>
   </component>
 </project>
