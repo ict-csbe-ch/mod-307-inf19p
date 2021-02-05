@@ -30,3 +30,5 @@ class User(models.Model):
     lastName = models.CharField(max_length=25, null=False)
     password = models.CharField(max_length=25, null=False)
     address = models.ForeignKey("Address", on_delete=models.RESTRICT)
+     def __str__(self):
+        return f'{self.firstName} {self.lastName} {self.address} {self.email}'
