@@ -11,4 +11,3 @@ admin.site.register(User)
 admin.site.register(Address)
 admin.site.register(Ort)
 admin.site.register(Cronjob)
-
